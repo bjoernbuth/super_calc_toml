@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+
+[project]
+name = "supercalc"
+version = "0.0.1"
+authors = [{ name = "Bjoern" }]
+readme = "Readme.md"
+
+dependencies = []
+
+[project.scripts]
+"suca" = "supercalc.simple.simple_calc:cli"
+"sucas" = "supercalc.scientific.scientific_calc:cli"
+
+
+[tool.setuptools]
+packages = ["supercalc"]
