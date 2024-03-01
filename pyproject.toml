@@ -16,3 +16,6 @@ dependencies = []
 
 [tool.setuptools]
 packages = ["supercalc"]
+
+[tool.black]
+line-length = 100
