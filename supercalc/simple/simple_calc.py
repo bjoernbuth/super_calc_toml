@@ -10,7 +10,7 @@ Funtions:
 """
 
 import click
-
+from click_aliases import ClickAliasedGroup
 
 # @click.group()
 
@@ -24,7 +24,7 @@ MAIN_GROUP = None
 
 
 # @click.command(cls=CustomGroup)
-@click.group()
+@click.group(cls=ClickAliasedGroup)
 def main_group():
     """Click gropup for simple calculations."""
     pass
@@ -38,7 +38,12 @@ CLI = None
 INT_GROUP = None
 
 
-@main_group.group(name="int", help="subcommand - Integer operations")
+@main_group.group(
+    name="int",
+    help="subcommand - Integer operations",
+    cls=ClickAliasedGroup,
+    aliases=["i"],
+)
 def _int():
     pass
 
@@ -50,7 +55,7 @@ def _int():
 #     click.echo(f"Sum: {total}")
 
 
-@_int.command(name="add")
+@_int.command(name="add", aliases=["a"])
 @click.argument("numbers", nargs=-1, type=int)
 def int_add(numbers):
     """Add 2 integers, (group int but also  main group)."""
@@ -114,7 +119,14 @@ GROUP_FLOAT = None
 
 
 # create a subgroup of the cli group
-@main_group.group(name="float", help="subcommand - Float operations")
+@main_group.group(
+    name="float",
+    help="subcommand - Float operations",
+    cls=ClickAliasedGroup,
+    aliases=[
+        "fl",
+    ],
+)
 def _float():
     pass
 
@@ -137,7 +149,15 @@ def float_mult(numbers):
     click.echo(f"Product: {result}")
 
 
-@main_group.group(name="fr", help="subcommand - fractions")
+GROUP_FR = None
+
+
+@main_group.group(
+    name="fr",
+    help="subcommand - fractions",
+    cls=ClickAliasedGroup,
+    aliases=["fr"],
+)
 def _fr():
     pass
 
