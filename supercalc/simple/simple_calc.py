@@ -20,10 +20,12 @@ import click
 #         original_help = super().get_help(ctx)
 #         return f"==== Running newcalc (nc) ====\n\n{original_help}"
 
+MAIN_GROUP = None
+
 
 # @click.command(cls=CustomGroup)
 @click.group()
-def cli():
+def main_group():
     """Click gropup for simple calculations."""
     pass
 
@@ -33,32 +35,34 @@ CLI = None
 
 # @click.command()
 
+INT_GROUP = None
 
-@cli.group(name="int", help="subcommand - Integer operations")
+
+@main_group.group(name="int", help="subcommand - Integer operations")
 def _int():
     pass
 
 
-# quick hack for testing to have undecorated version of the function
-def add_orig(numbers):
-    """Add numbers together"""
-    total = sum(numbers)
-    click.echo(f"Sum: {total}")
+# # quick hack for testing to have undecorated version of the function
+# def add_orig(numbers):
+#     """Add numbers together"""
+#     total = sum(numbers)
+#     click.echo(f"Sum: {total}")
 
 
 @_int.command(name="add")
 @click.argument("numbers", nargs=-1, type=int)
-def add(numbers):
-    """Add numbers together"""
+def int_add(numbers):
+    """Add 2 integers, (group int but also  main group)."""
     total = sum(numbers)
     click.echo(f"Sum: {total}")
 
 
-@_int.command()
+@_int.command(name="sub")
 @click.argument("x", type=int)
 @click.argument("y", type=int)
-def subtract(x, y):
-    """Subtract numbers"""
+def int_subtract(x, y):
+    """Subtract 2 integers (group int but also  main group)"""
     res = x - y
     click.echo(f"Difference: {res}")
 
@@ -110,7 +114,7 @@ GROUP_FLOAT = None
 
 
 # create a subgroup of the cli group
-@cli.group(name="float", help="subcommand - Float operations")
+@main_group.group(name="float", help="subcommand - Float operations")
 def _float():
     pass
 
@@ -133,7 +137,7 @@ def float_mult(numbers):
     click.echo(f"Product: {result}")
 
 
-@cli.group(name="fr", help="subcommand - fractions")
+@main_group.group(name="fr", help="subcommand - fractions")
 def _fr():
     pass
 
@@ -177,6 +181,13 @@ def fr_add(x, y):
         click.echo(f"Sum: {result}")
 
 
+# add the command _add from the subcommand group to the main group
+main_group.add_command(int_add)
+main_group.add_command(int_subtract)
+
+
+cli = click.CommandCollection(sources=[_int])
+
 if __name__ == "__main__":
-    cli()
+    main_group()
     # pass
