@@ -1,5 +1,5 @@
 from .int_group import (
-    _int,
+    int_group,
     int_add,
     int_mult,
     int_subtract,

@@ -10,11 +10,12 @@ from click_aliases import ClickAliasedGroup
     cls=ClickAliasedGroup,
     # aliases=["i"],
 )
-def _int():
+@click.help_option("-h", "--help")
+def int_group():
     pass
 
 
-@_int.command(name="add", aliases=["a"])
+@int_group.command(name="add", aliases=["a"])
 @click.argument("numbers", nargs=-1, type=int)
 def int_add(numbers):
     """Add 2 integers, (group int but also  main group)."""
@@ -22,7 +23,7 @@ def int_add(numbers):
     click.echo(f"Sum: {total}")
 
 
-@_int.command(name="sub")
+@int_group.command(name="sub", aliases=["s"])
 @click.argument("x", type=int)
 @click.argument("y", type=int)
 def int_subtract(x, y):
@@ -31,7 +32,7 @@ def int_subtract(x, y):
     click.echo(f"Difference: {res}")
 
 
-@_int.command(name="mult")
+@int_group.command(name="mult", aliases=["m"])
 @click.argument("numbers", nargs=-1, type=int)
 def int_mult(numbers):
     """Multiply integers, arbitrary number of args."""
@@ -41,7 +42,7 @@ def int_mult(numbers):
     click.echo(f"Product: {result}")
 
 
-@_int.command(name="div")
+@int_group.command(name="div", aliases=["d"])
 @click.argument("x", type=int)
 @click.argument("y", type=int)
 def int_div(x, y):
@@ -53,7 +54,7 @@ def int_div(x, y):
         click.echo("Error: Cannot divide by zero")
 
 
-@_int.command(name="exp")
+@int_group.command(name="exp", aliases=["e"])
 @click.argument("x", type=int)
 @click.argument("y", type=int)
 def int_exp(x, y):
@@ -62,7 +63,7 @@ def int_exp(x, y):
     click.echo(f"Exponentiation: {result}")
 
 
-@_int.command(name="mod")
+@int_group.command(name="mod")
 @click.argument("x", type=int)
 @click.argument("y", type=int)
 def int_mod(x, y):
@@ -75,4 +76,4 @@ def int_mod(x, y):
 
 
 if __name__ == "__main__":
-    _int()
+    int_group()
