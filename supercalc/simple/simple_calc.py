@@ -43,26 +43,13 @@ from supercalc.simple.int_group import (  # pylint: disable=unused-import
 MAIN_GROUP = None
 
 
-# @click.command(cls=CustomGroup)
 @click.group(cls=ClickAliasedGroup)
 def main_group():
     """Click gropup for simple calculations."""
     pass
 
 
-# for navigation purposes
-CLI = None
-
-# @click.command()
-
 INT_GROUP = None
-
-
-# # quick hack for testing to have undecorated version of the function
-# def add_orig(numbers):
-#     """Add numbers together"""
-#     total = sum(numbers)
-#     click.echo(f"Sum: {total}")
 
 
 GROUP_FLOAT = None
