@@ -4,5 +4,6 @@
     ],
     "python.testing.unittestEnabled": false,
     "python.testing.pytestEnabled": true,
-    "outline.showVariables": false
+    "outline.showVariables": false,
+    "git.autorefresh": true
 }

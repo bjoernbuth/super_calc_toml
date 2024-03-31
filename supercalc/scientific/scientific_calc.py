@@ -21,8 +21,10 @@ import math
 import supercalc.simple.int_group
 
 
-@click.group()
+@click.group(help="Group for scientific calculations (click help).")
+@click.help_option("-h", "--h", "--help")
 def sci_grp():
+    """Group for scientific calculations."""
     pass
 
 

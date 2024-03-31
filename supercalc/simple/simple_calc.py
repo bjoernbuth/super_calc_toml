@@ -163,7 +163,7 @@ def fr_add(x, y):
 main_group.add_command(int_group, aliases=["i"])
 
 
-cli = click.CommandCollection(sources=[int_group])
+# cli = click.CommandCollection(sources=[int_group])
 
 if __name__ == "__main__":
     main_group()

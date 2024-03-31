@@ -10,8 +10,9 @@ readme = "Readme.md"
 dependencies = []
 
 [project.scripts]
-"suca" = "supercalc.simple.simple_calc:main_group"
-"sucas" = "supercalc.scientific.scientific_calc:cli"
+"suca" = "supercalc.__main__:main"
+# "suca" = "supercalc.simple.simple_calc:main_group"
+# "sucas" = "supercalc.scientific.scientific_calc:cli"
 
 
 [tool.setuptools]
