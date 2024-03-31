@@ -22,11 +22,11 @@ import supercalc.simple.int_group
 
 
 @click.group()
-def cli():
+def sci_grp():
     pass
 
 
-@cli.command()
+@sci_grp.command()
 @click.option(
     "--rad",
     "-r",
@@ -46,7 +46,7 @@ def sin(value, mode):
     click.echo(f"Result: {result}")
 
 
-@cli.command()
+@sci_grp.command()
 @click.argument("x", type=float)
 def cos(x):
     """Calculate cosine of x"""
@@ -63,7 +63,7 @@ def tan(x):
         print("Error in tan calculatation: Cannot calculate tangent of a multiple of 90 degrees")
 
 
-@cli.command(name="tan")
+@sci_grp.command(name="tan")
 @click.argument("x", type=float)
 def tan_decorated(x):
     """Calculate tangent of x"""
@@ -74,7 +74,7 @@ def tan_decorated(x):
         click.echo("Error: Cannot calculate tangent of a multiple of 90 degrees")
 
 
-@cli.command()
+@sci_grp.command()
 @click.argument("x", type=float)
 def log(x):
     """Calculate natural logarithm of x"""
@@ -85,7 +85,7 @@ def log(x):
         click.echo("Error: Cannot calculate logarithm of a non-positive number")
 
 
-@cli.command()
+@sci_grp.command()
 @click.argument("x", type=float)
 def sqrt(x):
     """Calculate square root of x"""
@@ -97,4 +97,4 @@ def sqrt(x):
 
 
 if __name__ == "__main__":
-    cli()
+    sci_grp()
