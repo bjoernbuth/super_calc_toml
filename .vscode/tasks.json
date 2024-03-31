@@ -1,0 +1,30 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Open Git Graph",
+            "command": "${command:git-graph.view}",
+            "hide": true,
+            "problemMatcher": [],
+        },
+        {
+            "label": "Pin Active Editor",
+            "command": "${command:workbench.action.pinEditor}",
+            "hide": true,
+            "problemMatcher": [],
+        },
+        {
+            "label": "Open and Pin Git Graph",
+            "hide": true,
+            "dependsOn": [
+                "Open Git Graph",
+                "Pin Active Editor",
+            ],
+            "dependsOrder": "sequence",
+            "problemMatcher": [],
+            "runOptions": {
+                "runOn": "folderOpen",
+            },
+        },
+    ]
+}
