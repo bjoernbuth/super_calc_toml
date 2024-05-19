@@ -15,6 +15,17 @@ def int_group():
     pass
 
 
+@int_group.command(name='add')
+@click.argument('files', type=click.Path(exists=True), nargs=-1)
+def add_int(files):
+    """Adds integers from given files."""
+    total = 0
+    for filepath in files:
+        number_str = read_number_from_file(filepath)
+        total += int(number_str)
+    print(f"Integer sum: {total}")
+
+
 @int_group.command(name="add", aliases=["a"])
 @click.argument("numbers", nargs=-1, type=int)
 def int_add(numbers):
