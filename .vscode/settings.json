@@ -1,8 +1,9 @@
-"python.testing.pytestArgs": [
-    "tests"
-],
-"python.testing.unittestEnabled": false,
-"python.testing.pytestEnabled": true,
-"outline.showVariables": false,
-"git-graph.openNewTabEditorGroup": "Two"
+{
+    "python.testing.pytestArgs": [
+        "tests"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "outline.showVariables": false,
+    "git-graph.openNewTabEditorGroup": "Two",
 }
