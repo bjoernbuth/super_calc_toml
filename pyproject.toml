@@ -11,9 +11,6 @@ dependencies = []
 
 [project.scripts]
 "suca" = "supercalc.main:main"
-# "suca" = "supercalc.simple.simple_calc:main_group"
-# "sucas" = "supercalc.scientific.scientific_calc:cli"
-
 
 [tool.setuptools]
 packages = ["supercalc"]

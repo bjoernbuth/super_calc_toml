@@ -1,9 +1,8 @@
 import click
 from click_aliases import ClickAliasedGroup
-
-
 from supercalc.simple.simple_calc import main_group
 from supercalc.scientific.scientific_calc import sci_grp
+from pathlib import Path
 
 
 @click.group()
@@ -12,22 +11,10 @@ def simple(scls=ClickAliasedGroup):
     pass
 
 
-# @simple.command(name="nichts", aliases=["n"])
-# def nichts():
-#     click.echo("nichts")
-
-
-# simple.add_command(main_group)
-# simple.add_command(main_group, aliases=["sc"])
-
-
-# @simple.group(
-#     name="sc",
-#     help="subcommand - scientific",
-#     cls=ClickAliasedGroup,
-# )
-# def sc():
-#     main_group()
+def read_number_from_file(filepath):
+    """Reads the first line of a file and returns it as a string."""
+    with open(filepath, "r") as file:
+        return file.readline().strip()
 
 
 simple.add_command(main_group, name="si")

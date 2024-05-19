@@ -138,19 +138,8 @@ def fr_add(x, y):
         click.echo(f"Sum: {result}")
 
 
-# add some commands from the _int gropup to the main_group (a) for easier access
-# (b) for testing purposes (keep the old way of calling the functions)
-# main_group.add_command(int_add)
-# main_group.add_command(int_subtract)
-# main_group.add_command(int_mult)
-# main_group.add_command(int_div)
-# main_group.add_command(int_exp)
-# main_group.add_command(int_mod)
-
 main_group.add_command(int_group, aliases=["i"])
 
-
-# cli = click.CommandCollection(sources=[int_group])
 
 if __name__ == "__main__":
     main_group()

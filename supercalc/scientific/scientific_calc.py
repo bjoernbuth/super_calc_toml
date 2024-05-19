@@ -9,15 +9,6 @@
 import click
 import math
 
-# import supercalc
-# from supercalc.simple.int_group.int_group import (  # pylint: disable=unused-import
-#     int_add,
-#     int_mult,
-#     int_div,
-#     int_exp,
-#     int_mod,
-# )
-
 import supercalc.simple.int_group
 
 
