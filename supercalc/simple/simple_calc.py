@@ -67,41 +67,6 @@ INT_GROUP = None
 #     click.echo(f"Sum: {total}")
 
 
-GROUP_FLOAT = None
-
-
-# create a subgroup of the cli group
-@si.group(
-    name="float",
-    help="subcommand - Float operations",
-    cls=ClickAliasedGroup,
-    aliases=[
-        "fl",
-    ],
-)
-@click.help_option("-h", "--help")
-def _float():
-    pass
-
-
-@_float.command(name="add")
-@click.argument("x", type=float)
-@click.argument("y", type=float)
-def float_add(x, y):
-    """Add two numbers"""
-    click.echo(f"Sum: {x + y}")
-
-
-@_float.command(name="mult")
-@click.argument("numbers", nargs=-1, type=float)
-def float_mult(numbers):
-    """Multiply numbers"""
-    result = 1
-    for num in numbers:
-        result *= num
-    click.echo(f"Product: {result}")
-
-
 GROUP_FR = None
 
 
