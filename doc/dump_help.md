@@ -32,13 +32,9 @@ Options:
   --help  Show this message and exit.
 
 Commands:
-  cos      Calculate cosine of x
   fr (fr)  subcommand - fractions
   int (i)  subcommand - Integer operations
-  log      Calculate natural logarithm of x
-  sin      Calculate sine of a number.
-  sqrt     Calculate square root of x
-  tan      Calculate tangent of x
+  sci (s)  Group for scientific calculations (click help).
 ```
 
 ### 1.2.1  suca.calc.fr - group
@@ -133,7 +129,23 @@ Options:
   --help  Show this message and exit.
 ```
 
-### 1.2.3  suca.calc.sin - command
+### 1.2.3  suca.calc.sci - group
+
+```
+Group for scientific calculations (click help).
+
+Options:
+  -h, --h, --help  Show this message and exit.
+
+Commands:
+  cos   Calculate cosine of x
+  log   Calculate natural logarithm of x
+  sin   Calculate sine of a number.
+  sqrt  Calculate square root of x
+  tan   Calculate tangent of x
+```
+
+#### 1.2.3.1  suca.calc.sci.sin - command
 
 ```
 Calculate sine of a number.
@@ -144,7 +156,7 @@ Options:
   --help     Show this message and exit.
 ```
 
-### 1.2.4  suca.calc.cos - command
+#### 1.2.3.2  suca.calc.sci.cos - command
 
 ```
 Calculate cosine of x
@@ -153,7 +165,7 @@ Options:
   --help  Show this message and exit.
 ```
 
-### 1.2.5  suca.calc.tan - command
+#### 1.2.3.3  suca.calc.sci.tan - command
 
 ```
 Calculate tangent of x
@@ -162,7 +174,7 @@ Options:
   --help  Show this message and exit.
 ```
 
-### 1.2.6  suca.calc.log - command
+#### 1.2.3.4  suca.calc.sci.log - command
 
 ```
 Calculate natural logarithm of x
@@ -171,7 +183,7 @@ Options:
   --help  Show this message and exit.
 ```
 
-### 1.2.7  suca.calc.sqrt - command
+#### 1.2.3.5  suca.calc.sci.sqrt - command
 
 ```
 Calculate square root of x
