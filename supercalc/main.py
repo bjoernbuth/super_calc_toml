@@ -1,7 +1,6 @@
 import click
 from click_aliases import ClickAliasedGroup
 from supercalc.simple.simple_calc import si
-from supercalc.scientific.scientific_calc import sci
 from supercalc.dumphelp_to_file import dumphelp_to_file
 from pathlib import Path
 
@@ -32,7 +31,6 @@ def bashcomp(long_argument_name_01, long_argument_name_02):
 
 
 suca.add_command(si, name="si")
-suca.add_command(sci, name="sc")
 
 
 suca.add_command(dumphelp_to_file, name="dh")
