@@ -133,14 +133,14 @@ calc.add_command(int_group, aliases=["i"])
 cli = click.CommandCollection(sources=[int_group])
 
 
-# @click.group(help="Group for scientific calculations (click help).")
-# @click.help_option("-h", "--h", "--help")
-# def sci():
-#     """Group for scientific calculations."""
-#     pass
+@click.group(help="Group for scientific calculations (click help).")
+@click.help_option("-h", "--h", "--help")
+def sci():
+    """Group for scientific calculations."""
+    pass
 
 
-@calc.command()
+@sci.command()
 @click.option(
     "--rad",
     "-r",
@@ -160,7 +160,7 @@ def sin(value, mode):
     click.echo(f"Result: {result}")
 
 
-@calc.command()
+@sci.command()
 @click.argument("x", type=float)
 def cos(x):
     """Calculate cosine of x"""
@@ -177,7 +177,7 @@ def tan(x):
         print("Error in tan calculatation: Cannot calculate tangent of a multiple of 90 degrees")
 
 
-@calc.command(name="tan")
+@sci.command(name="tan")
 @click.argument("x", type=float)
 def tan_decorated(x):
     """Calculate tangent of x"""
@@ -188,7 +188,7 @@ def tan_decorated(x):
         click.echo("Error: Cannot calculate tangent of a multiple of 90 degrees")
 
 
-@calc.command()
+@sci.command()
 @click.argument("x", type=float)
 def log(x):
     """Calculate natural logarithm of x"""
@@ -199,7 +199,7 @@ def log(x):
         click.echo("Error: Cannot calculate logarithm of a non-positive number")
 
 
-@calc.command()
+@sci.command()
 @click.argument("x", type=float)
 def sqrt(x):
     """Calculate square root of x"""
@@ -209,6 +209,8 @@ def sqrt(x):
     except ValueError:
         click.echo("Error: Cannot calculate square root of a negative number")
 
+
+calc.add_command(sci, aliases=["s"])
 
 if __name__ == "__main__":
     cli()
