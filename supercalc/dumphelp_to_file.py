@@ -79,9 +79,9 @@ def dumphelp_to_file(
         print(res_text)
         # print("hi")
 
-    # with open(target_file, "w") as f:
-    #     f.write(res_text)
-    #     print("Dumped help to", target_file)
+    with open(target_file, "w") as f:
+        f.write(res_text)
+        print("Dumped help to", target_file)
 
     # re.sub(pattern, "", res_text)
 
