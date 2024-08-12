@@ -1,3 +1,3 @@
-from . import simple
+from . import calc
 
-from supercalc.simple.simple_calc import si
+from supercalc.calc.calc import si

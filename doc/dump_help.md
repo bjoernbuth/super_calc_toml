@@ -1,4 +1,4 @@
-# 1  suca 
+#  suca 
 
 ```
 Options:
@@ -7,11 +7,10 @@ Options:
 Commands:
   bashcomp  Test command for bash completion.
   dh        Dump the help to ../docs/dump_help.md.
-  sc        Group for scientific calculations (click help).
   si        Click gropup for simple calculations.
 ```
 
-## 1.1  suca.bashcomp - command
+##  suca.bashcomp - command
 
 ```
 Test command for bash completion.
@@ -24,7 +23,7 @@ Options:
                                   Second number
 ```
 
-## 1.2  suca.si - group
+##  suca.si - group
 
 ```
 Click gropup for simple calculations.
@@ -33,43 +32,16 @@ Options:
   --help  Show this message and exit.
 
 Commands:
-  float (fl)  subcommand - Float operations
-  fr (fr)     subcommand - fractions
-  int (i)     subcommand - Integer operations
+  cos      Calculate cosine of x
+  fr (fr)  subcommand - fractions
+  int (i)  subcommand - Integer operations
+  log      Calculate natural logarithm of x
+  sin      Calculate sine of a number.
+  sqrt     Calculate square root of x
+  tan      Calculate tangent of x
 ```
 
-### 1.2.1  suca.si.float - group
-
-```
-subcommand - Float operations
-
-Options:
-  -h, --help  Show this message and exit.
-
-Commands:
-  add   Add two numbers
-  mult  Multiply numbers
-```
-
-#### 1.2.1.1  suca.si.float.add - command
-
-```
-Add two numbers
-
-Options:
-  --help  Show this message and exit.
-```
-
-#### 1.2.1.2  suca.si.float.mult - command
-
-```
-Multiply numbers
-
-Options:
-  --help  Show this message and exit.
-```
-
-### 1.2.2  suca.si.fr - group
+###  suca.si.fr - group
 
 ```
 subcommand - fractions
@@ -81,7 +53,7 @@ Commands:
   add  Add two fractions
 ```
 
-#### 1.2.2.1  suca.si.fr.add - command
+####  suca.si.fr.add - command
 
 ```
 Add two fractions
@@ -90,7 +62,7 @@ Options:
   --help  Show this message and exit.
 ```
 
-### 1.2.3  suca.si.int - group
+###  suca.si.int - group
 
 ```
 subcommand - Integer operations
@@ -107,7 +79,7 @@ Commands:
   sub (s)   Subtract 2 integers (group int but also main group)
 ```
 
-#### 1.2.3.1  suca.si.int.add - command
+####  suca.si.int.add - command
 
 ```
 Add 2 integers, (group int but also  main group).
@@ -116,7 +88,7 @@ Options:
   --help  Show this message and exit.
 ```
 
-#### 1.2.3.2  suca.si.int.sub - command
+####  suca.si.int.sub - command
 
 ```
 Subtract 2 integers (group int but also  main group)
@@ -125,7 +97,7 @@ Options:
   --help  Show this message and exit.
 ```
 
-#### 1.2.3.3  suca.si.int.mult - command
+####  suca.si.int.mult - command
 
 ```
 Multiply integers, arbitrary number of args.
@@ -134,7 +106,7 @@ Options:
   --help  Show this message and exit.
 ```
 
-#### 1.2.3.4  suca.si.int.div - command
+####  suca.si.int.div - command
 
 ```
 Divide two numbers
@@ -143,7 +115,7 @@ Options:
   --help  Show this message and exit.
 ```
 
-#### 1.2.3.5  suca.si.int.exp - command
+####  suca.si.int.exp - command
 
 ```
 Exponentiation
@@ -152,7 +124,7 @@ Options:
   --help  Show this message and exit.
 ```
 
-#### 1.2.3.6  suca.si.int.mod - command
+####  suca.si.int.mod - command
 
 ```
 Modulo operation
@@ -161,23 +133,7 @@ Options:
   --help  Show this message and exit.
 ```
 
-## 1.3  suca.sci - group
-
-```
-Group for scientific calculations (click help).
-
-Options:
-  -h, --h, --help  Show this message and exit.
-
-Commands:
-  cos   Calculate cosine of x
-  log   Calculate natural logarithm of x
-  sin   Calculate sine of a number.
-  sqrt  Calculate square root of x
-  tan   Calculate tangent of x
-```
-
-### 1.3.1  suca.sci.sin - command
+###  suca.si.sin - command
 
 ```
 Calculate sine of a number.
@@ -188,7 +144,7 @@ Options:
   --help     Show this message and exit.
 ```
 
-### 1.3.2  suca.sci.cos - command
+###  suca.si.cos - command
 
 ```
 Calculate cosine of x
@@ -197,7 +153,7 @@ Options:
   --help  Show this message and exit.
 ```
 
-### 1.3.3  suca.sci.tan - command
+###  suca.si.tan - command
 
 ```
 Calculate tangent of x
@@ -206,7 +162,7 @@ Options:
   --help  Show this message and exit.
 ```
 
-### 1.3.4  suca.sci.log - command
+###  suca.si.log - command
 
 ```
 Calculate natural logarithm of x
@@ -215,7 +171,7 @@ Options:
   --help  Show this message and exit.
 ```
 
-### 1.3.5  suca.sci.sqrt - command
+###  suca.si.sqrt - command
 
 ```
 Calculate square root of x
@@ -224,7 +180,7 @@ Options:
   --help  Show this message and exit.
 ```
 
-## 1.4  suca.dumphelp-to-file - command
+##  suca.dumphelp-to-file - command
 
 ```
 Dump the help to ../docs/dump_help.md.

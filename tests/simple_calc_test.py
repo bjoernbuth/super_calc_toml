@@ -1,5 +1,5 @@
-from supercalc.simple import simple_calc as sc
-from supercalc.simple.int_group.int_group import int_group  # pylint: disable=unused-import
+from supercalc.calc import calc as sc
+from supercalc.calc.int_group.int_group import int_group  # pylint: disable=unused-import
 
 from click.testing import CliRunner
 

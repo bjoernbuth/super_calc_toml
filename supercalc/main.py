@@ -1,6 +1,6 @@
 import click
 from click_aliases import ClickAliasedGroup
-from supercalc.simple.simple_calc import si
+from supercalc.calc.calc import si
 from supercalc.dumphelp_to_file import dumphelp_to_file
 from pathlib import Path
 

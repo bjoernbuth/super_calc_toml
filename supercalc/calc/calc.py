@@ -22,7 +22,7 @@ import click
 import math
 from click_aliases import ClickAliasedGroup
 
-from supercalc.simple.int_group import (  # pylint: disable=unused-import
+from supercalc.calc.int_group import (  # pylint: disable=unused-import
     int_group,
     int_add,
     int_subtract,
