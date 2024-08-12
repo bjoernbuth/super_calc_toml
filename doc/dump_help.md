@@ -1,4 +1,4 @@
-#  suca 
+# 1  suca 
 
 ```
 Options:
@@ -6,11 +6,11 @@ Options:
 
 Commands:
   bashcomp  Test command for bash completion.
+  calc      Click gropup for simple calculations.
   dh        Dump the help to ../docs/dump_help.md.
-  si        Click gropup for simple calculations.
 ```
 
-##  suca.bashcomp - command
+## 1.1  suca.bashcomp - command
 
 ```
 Test command for bash completion.
@@ -23,7 +23,7 @@ Options:
                                   Second number
 ```
 
-##  suca.si - group
+## 1.2  suca.calc - group
 
 ```
 Click gropup for simple calculations.
@@ -41,7 +41,7 @@ Commands:
   tan      Calculate tangent of x
 ```
 
-###  suca.si.fr - group
+### 1.2.1  suca.calc.fr - group
 
 ```
 subcommand - fractions
@@ -53,7 +53,7 @@ Commands:
   add  Add two fractions
 ```
 
-####  suca.si.fr.add - command
+#### 1.2.1.1  suca.calc.fr.add - command
 
 ```
 Add two fractions
@@ -62,7 +62,7 @@ Options:
   --help  Show this message and exit.
 ```
 
-###  suca.si.int - group
+### 1.2.2  suca.calc.int - group
 
 ```
 subcommand - Integer operations
@@ -79,7 +79,7 @@ Commands:
   sub (s)   Subtract 2 integers (group int but also main group)
 ```
 
-####  suca.si.int.add - command
+#### 1.2.2.1  suca.calc.int.add - command
 
 ```
 Add 2 integers, (group int but also  main group).
@@ -88,7 +88,7 @@ Options:
   --help  Show this message and exit.
 ```
 
-####  suca.si.int.sub - command
+#### 1.2.2.2  suca.calc.int.sub - command
 
 ```
 Subtract 2 integers (group int but also  main group)
@@ -97,7 +97,7 @@ Options:
   --help  Show this message and exit.
 ```
 
-####  suca.si.int.mult - command
+#### 1.2.2.3  suca.calc.int.mult - command
 
 ```
 Multiply integers, arbitrary number of args.
@@ -106,7 +106,7 @@ Options:
   --help  Show this message and exit.
 ```
 
-####  suca.si.int.div - command
+#### 1.2.2.4  suca.calc.int.div - command
 
 ```
 Divide two numbers
@@ -115,7 +115,7 @@ Options:
   --help  Show this message and exit.
 ```
 
-####  suca.si.int.exp - command
+#### 1.2.2.5  suca.calc.int.exp - command
 
 ```
 Exponentiation
@@ -124,7 +124,7 @@ Options:
   --help  Show this message and exit.
 ```
 
-####  suca.si.int.mod - command
+#### 1.2.2.6  suca.calc.int.mod - command
 
 ```
 Modulo operation
@@ -133,7 +133,7 @@ Options:
   --help  Show this message and exit.
 ```
 
-###  suca.si.sin - command
+### 1.2.3  suca.calc.sin - command
 
 ```
 Calculate sine of a number.
@@ -144,7 +144,7 @@ Options:
   --help     Show this message and exit.
 ```
 
-###  suca.si.cos - command
+### 1.2.4  suca.calc.cos - command
 
 ```
 Calculate cosine of x
@@ -153,7 +153,7 @@ Options:
   --help  Show this message and exit.
 ```
 
-###  suca.si.tan - command
+### 1.2.5  suca.calc.tan - command
 
 ```
 Calculate tangent of x
@@ -162,7 +162,7 @@ Options:
   --help  Show this message and exit.
 ```
 
-###  suca.si.log - command
+### 1.2.6  suca.calc.log - command
 
 ```
 Calculate natural logarithm of x
@@ -171,7 +171,7 @@ Options:
   --help  Show this message and exit.
 ```
 
-###  suca.si.sqrt - command
+### 1.2.7  suca.calc.sqrt - command
 
 ```
 Calculate square root of x
@@ -180,7 +180,7 @@ Options:
   --help  Show this message and exit.
 ```
 
-##  suca.dumphelp-to-file - command
+## 1.3  suca.dumphelp-to-file - command
 
 ```
 Dump the help to ../docs/dump_help.md.

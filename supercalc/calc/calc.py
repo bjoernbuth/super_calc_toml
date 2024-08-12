@@ -47,7 +47,7 @@ MAIN_GROUP = None
 # @click.command(cls=CustomGroup)
 # @click.group(cls=ClickAliasedGroup, name="main_group")
 @click.group(cls=ClickAliasedGroup)
-def si():
+def calc():
     """Click gropup for simple calculations."""
     pass
 
@@ -70,7 +70,7 @@ INT_GROUP = None
 GROUP_FR = None
 
 
-@si.group(
+@calc.group(
     name="fr",
     help="subcommand - fractions",
     cls=ClickAliasedGroup,
@@ -127,7 +127,7 @@ def fr_add(x, y):
 # main_group.add_command(int_exp)
 # main_group.add_command(int_mod)
 
-si.add_command(int_group, aliases=["i"])
+calc.add_command(int_group, aliases=["i"])
 
 
 cli = click.CommandCollection(sources=[int_group])
@@ -140,7 +140,7 @@ cli = click.CommandCollection(sources=[int_group])
 #     pass
 
 
-@si.command()
+@calc.command()
 @click.option(
     "--rad",
     "-r",
@@ -160,7 +160,7 @@ def sin(value, mode):
     click.echo(f"Result: {result}")
 
 
-@si.command()
+@calc.command()
 @click.argument("x", type=float)
 def cos(x):
     """Calculate cosine of x"""
@@ -177,7 +177,7 @@ def tan(x):
         print("Error in tan calculatation: Cannot calculate tangent of a multiple of 90 degrees")
 
 
-@si.command(name="tan")
+@calc.command(name="tan")
 @click.argument("x", type=float)
 def tan_decorated(x):
     """Calculate tangent of x"""
@@ -188,7 +188,7 @@ def tan_decorated(x):
         click.echo("Error: Cannot calculate tangent of a multiple of 90 degrees")
 
 
-@si.command()
+@calc.command()
 @click.argument("x", type=float)
 def log(x):
     """Calculate natural logarithm of x"""
@@ -199,7 +199,7 @@ def log(x):
         click.echo("Error: Cannot calculate logarithm of a non-positive number")
 
 
-@si.command()
+@calc.command()
 @click.argument("x", type=float)
 def sqrt(x):
     """Calculate square root of x"""
