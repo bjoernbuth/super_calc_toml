@@ -1,9 +1,11 @@
 import click
-import click_options_abbrevs as click_abbrevs
-import constants
+import supercalc.click_options_abbrevs as click_abbrevs
+import supercalc.constants as constants
 import dataclasses
 
-import main
+import supercalc.main as main
+import re
+import pyperclip
 
 
 @dataclasses.dataclass
@@ -55,7 +57,7 @@ def dumphelp_to_file(
         parent=None,
     )
 
-    lines = recursive_help(cmd=suca, help_config=help_config)
+    lines = recursive_help(cmd=main.simple, help_config=help_config)
 
     # Remove the lines matching the pattern "Usage:" other stuff [OPTIONS] other stuff
     pattern = r".*Usage.*\n*"
@@ -77,10 +79,11 @@ def dumphelp_to_file(
         print(res_text)
         # print("hi")
 
-    with open(target_file, "w") as f:
-        f.write(res_text)
-        print("Dumped help to", target_file)
-        # re.sub(pattern, "", res_text)
+    # with open(target_file, "w") as f:
+    #     f.write(res_text)
+    #     print("Dumped help to", target_file)
+
+    # re.sub(pattern, "", res_text)
 
     if copy_to_clipboard:
         pyperclip.copy(res_text)
@@ -147,3 +150,7 @@ def recursive_help(
         lines.extend(new_lines)
 
     return lines
+
+
+if __name__ == "__main__":
+    dumphelp_to_file()
