@@ -2,6 +2,7 @@ import click
 from click_aliases import ClickAliasedGroup
 from supercalc.simple.simple_calc import main_group
 from supercalc.scientific.scientific_calc import sci_grp
+from supercalc.dumphelp_to_file import dumphelp_to_file
 from pathlib import Path
 
 
@@ -32,6 +33,9 @@ def test_bash_completion_command(long_argument_name_01, long_argument_name_02):
 
 simple.add_command(main_group, name="si")
 simple.add_command(sci_grp, name="sc")
+
+
+simple.add_command(dumphelp_to_file, name="dh")
 
 
 def main():
