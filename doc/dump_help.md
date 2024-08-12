@@ -1,17 +1,17 @@
-# 1  simple 
+# 1  suca 
 
 ```
 Options:
   -h, --help, --h  Show this message and exit.
 
 Commands:
-  dh                            Dump the help to ../docs/dump_help.md.
-  sc                            Group for scientific calculations (click...
-  si                            Click gropup for simple calculations.
-  test-bash-completion-command  Test command for bash completion.
+  bashcomp  Test command for bash completion.
+  dh        Dump the help to ../docs/dump_help.md.
+  sc        Group for scientific calculations (click help).
+  si        Click gropup for simple calculations.
 ```
 
-## 1.1  simple.test-bash-completion-command - command
+## 1.1  suca.bashcomp - command
 
 ```
 Test command for bash completion.
@@ -24,7 +24,7 @@ Options:
                                   Second number
 ```
 
-## 1.2  simple.main-group - group
+## 1.2  suca.si - group
 
 ```
 Click gropup for simple calculations.
@@ -38,7 +38,7 @@ Commands:
   int (i)     subcommand - Integer operations
 ```
 
-### 1.2.1  simple.main-group.float - group
+### 1.2.1  suca.si.float - group
 
 ```
 subcommand - Float operations
@@ -51,7 +51,7 @@ Commands:
   mult  Multiply numbers
 ```
 
-#### 1.2.1.1  simple.main-group.float.add - command
+#### 1.2.1.1  suca.si.float.add - command
 
 ```
 Add two numbers
@@ -60,7 +60,7 @@ Options:
   --help  Show this message and exit.
 ```
 
-#### 1.2.1.2  simple.main-group.float.mult - command
+#### 1.2.1.2  suca.si.float.mult - command
 
 ```
 Multiply numbers
@@ -69,7 +69,7 @@ Options:
   --help  Show this message and exit.
 ```
 
-### 1.2.2  simple.main-group.fr - group
+### 1.2.2  suca.si.fr - group
 
 ```
 subcommand - fractions
@@ -81,7 +81,7 @@ Commands:
   add  Add two fractions
 ```
 
-#### 1.2.2.1  simple.main-group.fr.add - command
+#### 1.2.2.1  suca.si.fr.add - command
 
 ```
 Add two fractions
@@ -90,7 +90,7 @@ Options:
   --help  Show this message and exit.
 ```
 
-### 1.2.3  simple.main-group.int - group
+### 1.2.3  suca.si.int - group
 
 ```
 subcommand - Integer operations
@@ -107,7 +107,7 @@ Commands:
   sub (s)   Subtract 2 integers (group int but also main group)
 ```
 
-#### 1.2.3.1  simple.main-group.int.add - command
+#### 1.2.3.1  suca.si.int.add - command
 
 ```
 Add 2 integers, (group int but also  main group).
@@ -116,7 +116,7 @@ Options:
   --help  Show this message and exit.
 ```
 
-#### 1.2.3.2  simple.main-group.int.sub - command
+#### 1.2.3.2  suca.si.int.sub - command
 
 ```
 Subtract 2 integers (group int but also  main group)
@@ -125,7 +125,7 @@ Options:
   --help  Show this message and exit.
 ```
 
-#### 1.2.3.3  simple.main-group.int.mult - command
+#### 1.2.3.3  suca.si.int.mult - command
 
 ```
 Multiply integers, arbitrary number of args.
@@ -134,7 +134,7 @@ Options:
   --help  Show this message and exit.
 ```
 
-#### 1.2.3.4  simple.main-group.int.div - command
+#### 1.2.3.4  suca.si.int.div - command
 
 ```
 Divide two numbers
@@ -143,7 +143,7 @@ Options:
   --help  Show this message and exit.
 ```
 
-#### 1.2.3.5  simple.main-group.int.exp - command
+#### 1.2.3.5  suca.si.int.exp - command
 
 ```
 Exponentiation
@@ -152,7 +152,7 @@ Options:
   --help  Show this message and exit.
 ```
 
-#### 1.2.3.6  simple.main-group.int.mod - command
+#### 1.2.3.6  suca.si.int.mod - command
 
 ```
 Modulo operation
@@ -161,7 +161,7 @@ Options:
   --help  Show this message and exit.
 ```
 
-## 1.3  simple.sci-grp - group
+## 1.3  suca.sci - group
 
 ```
 Group for scientific calculations (click help).
@@ -177,7 +177,7 @@ Commands:
   tan   Calculate tangent of x
 ```
 
-### 1.3.1  simple.sci-grp.sin - command
+### 1.3.1  suca.sci.sin - command
 
 ```
 Calculate sine of a number.
@@ -188,7 +188,7 @@ Options:
   --help     Show this message and exit.
 ```
 
-### 1.3.2  simple.sci-grp.cos - command
+### 1.3.2  suca.sci.cos - command
 
 ```
 Calculate cosine of x
@@ -197,7 +197,7 @@ Options:
   --help  Show this message and exit.
 ```
 
-### 1.3.3  simple.sci-grp.tan - command
+### 1.3.3  suca.sci.tan - command
 
 ```
 Calculate tangent of x
@@ -206,7 +206,7 @@ Options:
   --help  Show this message and exit.
 ```
 
-### 1.3.4  simple.sci-grp.log - command
+### 1.3.4  suca.sci.log - command
 
 ```
 Calculate natural logarithm of x
@@ -215,7 +215,7 @@ Options:
   --help  Show this message and exit.
 ```
 
-### 1.3.5  simple.sci-grp.sqrt - command
+### 1.3.5  suca.sci.sqrt - command
 
 ```
 Calculate square root of x
@@ -224,7 +224,7 @@ Options:
   --help  Show this message and exit.
 ```
 
-## 1.4  simple.dumphelp-to-file - command
+## 1.4  suca.dumphelp-to-file - command
 
 ```
 Dump the help to ../docs/dump_help.md.

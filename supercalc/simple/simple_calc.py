@@ -44,8 +44,9 @@ MAIN_GROUP = None
 
 
 # @click.command(cls=CustomGroup)
+# @click.group(cls=ClickAliasedGroup, name="main_group")
 @click.group(cls=ClickAliasedGroup)
-def main_group():
+def si():
     """Click gropup for simple calculations."""
     pass
 
@@ -69,7 +70,7 @@ GROUP_FLOAT = None
 
 
 # create a subgroup of the cli group
-@main_group.group(
+@si.group(
     name="float",
     help="subcommand - Float operations",
     cls=ClickAliasedGroup,
@@ -103,7 +104,7 @@ def float_mult(numbers):
 GROUP_FR = None
 
 
-@main_group.group(
+@si.group(
     name="fr",
     help="subcommand - fractions",
     cls=ClickAliasedGroup,
@@ -160,7 +161,7 @@ def fr_add(x, y):
 # main_group.add_command(int_exp)
 # main_group.add_command(int_mod)
 
-main_group.add_command(int_group, aliases=["i"])
+si.add_command(int_group, aliases=["i"])
 
 
 cli = click.CommandCollection(sources=[int_group])

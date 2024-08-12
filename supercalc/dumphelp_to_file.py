@@ -57,7 +57,7 @@ def dumphelp_to_file(
         parent=None,
     )
 
-    lines = recursive_help(cmd=main.simple, help_config=help_config)
+    lines = recursive_help(cmd=main.suca, help_config=help_config)
 
     # Remove the lines matching the pattern "Usage:" other stuff [OPTIONS] other stuff
     pattern = r".*Usage.*\n*"
