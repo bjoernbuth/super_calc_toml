@@ -1,12 +1,10 @@
+from pathlib import Path
+
 import click
 from click_aliases import ClickAliasedGroup
+from clickhelper.dumphelp_to_file import add_dump_help_to_file_command
+
 from supercalc.calc.calc import calc
-from clickhelper.dumphelp_to_file import (
-    recursive_help as rh,
-    HelpConfig,
-    add_dump_help_to_file_command,
-)
-from pathlib import Path
 
 
 @click.group(cls=ClickAliasedGroup)
@@ -39,15 +37,9 @@ suca.add_command(calc, aliases=["c"])
 
 def main():
     add_dump_help_to_file_command(suca, name_of_dump_help_command="dh")
-    # add_dump_help_to_file_command(suca, name_of_dump_help_command="dh14")
     add_dump_help_to_file_command(calc)
     suca()
-
-    # res = rh(cmd=suca, help_config=HelpConfig())
-    # print(res)
 
 
 if __name__ == "__main__":
     suca()
-
-##
