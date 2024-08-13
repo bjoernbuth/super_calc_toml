@@ -10,9 +10,9 @@ from clickhelper.dumphelp_to_file import (
 from pathlib import Path
 
 
-@click.group()
+@click.group(cls=ClickAliasedGroup)
 @click.help_option("-h", "--help", "--h")
-def suca(scls=ClickAliasedGroup):
+def suca():
     pass
 
 
@@ -35,14 +35,14 @@ def bashcomp(long_argument_name_01, long_argument_name_02):
     print("Hi")
 
 
-suca.add_command(calc, name="calc")
+suca.add_command(calc, aliases=["c"])
 
 
-suca.add_command(dumphelp_to_file, name="dh2")
+suca.add_command(dumphelp_to_file, name="dh_old")
 
 
 def main():
-    add_dump_help_to_file_command(suca, name_of_dump_help_command="dh14")
+    add_dump_help_to_file_command(suca, name_of_dump_help_command="dh")
     # add_dump_help_to_file_command(suca, name_of_dump_help_command="dh14")
     add_dump_help_to_file_command(calc)
     suca()
