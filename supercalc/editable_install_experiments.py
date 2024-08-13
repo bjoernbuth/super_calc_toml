@@ -1,13 +1,21 @@
+# %%
 import click
 from click_aliases import ClickAliasedGroup
 from supercalc.calc.calc import calc
+
 from supercalc.dumphelp_to_file_old import dumphelp_to_file
-from clickhelper.dumphelp_to_file import (
-    recursive_help as rh,
-    HelpConfig,
-    add_dump_help_to_file_command,
-)
+
+# from clickhelper.dumphelp_to_file import (
+#     recursive_help as rh,
+#     HelpConfig,
+#     add_dump_help_to_file_command,
+# )
 from pathlib import Path
+
+from clickhelper2.dhtf import HelpConfig
+
+
+# %%
 
 
 @click.group(cls=ClickAliasedGroup)
@@ -53,6 +61,3 @@ def main():
 
 if __name__ == "__main__":
     suca()
-
-##
-
