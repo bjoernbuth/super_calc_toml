@@ -1,7 +1,6 @@
 import click
 from click_aliases import ClickAliasedGroup
 from supercalc.calc.calc import calc
-from supercalc.dumphelp_to_file_old import dumphelp_to_file
 from clickhelper.dumphelp_to_file import (
     recursive_help as rh,
     HelpConfig,
@@ -36,9 +35,6 @@ def bashcomp(long_argument_name_01, long_argument_name_02):
 
 
 suca.add_command(calc, aliases=["c"])
-
-
-suca.add_command(dumphelp_to_file, name="dh_old")
 
 
 def main():
