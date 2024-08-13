@@ -7,7 +7,7 @@ version = "0.0.1"
 authors = [{ name = "Bjoern" }]
 readme = "Readme.md"
 
-dependencies = []
+dependencies = ["click", "click-aliases", "pyperclip"]
 
 [project.scripts]
 "suca" = "supercalc.main:main"
