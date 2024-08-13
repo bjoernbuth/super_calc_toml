@@ -3,7 +3,7 @@ import click
 from click_aliases import ClickAliasedGroup
 from supercalc.calc.calc import calc
 
-from supercalc.dumphelp_to_file_old import dumphelp_to_file
+# from supercalc.dumphelp_to_file_old import dumphelp_to_file
 
 # from clickhelper.dumphelp_to_file import (
 #     recursive_help as rh,
