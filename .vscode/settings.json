@@ -7,4 +7,5 @@
     "outline.showVariables": false,
     "git-graph.openNewTabEditorGroup": "Two",
     "debugpy.debugJustMyCode": false,
+    "files.trimFinalNewlines": true,
 }
