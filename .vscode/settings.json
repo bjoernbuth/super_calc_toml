@@ -6,4 +6,5 @@
     "python.testing.pytestEnabled": true,
     "outline.showVariables": false,
     "git-graph.openNewTabEditorGroup": "Two",
+    "debugpy.debugJustMyCode": false,
 }
