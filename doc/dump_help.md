@@ -6,7 +6,7 @@ Options:
 
 Commands:
   bashcomp  Test command for bash completion.
-  calc      Click gropup for simple calculations.
+  calc (c)  Click gropup for simple calculations.
   dh        Dump the help to ../docs/dump_help.md.
 ```
 
@@ -32,6 +32,7 @@ Options:
   --help  Show this message and exit.
 
 Commands:
+  dh       Dump the help to ../docs/dump_help.md.
   fr (fr)  subcommand - fractions
   int (i)  subcommand - Integer operations
   sci (s)  Group for scientific calculations (click help).
@@ -192,15 +193,27 @@ Options:
   --help  Show this message and exit.
 ```
 
+### 1.2.4  suca.calc.dumphelp-to-file - command
+
+```
+Dump the help to ../docs/dump_help.md.
+
+Options:
+  --help, --h                     Show this message and exit.
+  --print_result, --p / --nop, --q
+                                  Print the result to the console.  [default:
+                                  print_result]
+  --number_sections, --ns / --no_number_sections, --nons
+                                  Print result to console.  [default:
+                                  no_number_sections]
+```
+
 ## 1.3  suca.dumphelp-to-file - command
 
 ```
 Dump the help to ../docs/dump_help.md.
 
 Options:
-  -c, --copy_to_clipboard / --noc
-                                  Copy the result of the command to the
-                                  clipboard.  [default: copy_to_clipboard]
   --help, --h                     Show this message and exit.
   --print_result, --p / --nop, --q
                                   Print the result to the console.  [default:

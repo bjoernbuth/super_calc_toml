@@ -1,7 +1,20 @@
 # super_calc_toml
 
 Small package to try out editable install with pyproject.toml and no setup.py
-or setup.cfg.
+or setup.cfg. Also meant for experiments using the click library:
+[click](https://click.palletsprojects.com/en/8.1.x/)
+
+In order to have short names for some groups and command click-aliases is used:
+[click-aliases](https://github.com/click-contrib/click-aliases)
+
+For example:
+
+
+    suca calc int add 1 2 3   , has a short form
+    suca c i a 1 2 3
+
+
+
 
 Keywords: PEP660
 
@@ -12,13 +25,14 @@ Keywords: PEP660
 This will add the numbers 1 to 2000 together
 
 ```bash
-echo $(seq 1 2000) | xargs suca add
+echo $(seq 1 2000) | xargs suca calc int  add
 ```
 
-Factorials are also supported
+To compute 10!
 
 ```bash
-echo $(seq 1 10) | xargs suca factorial
+echo $(seq 1 10) | xargs suca calc int mult
+Product: 3628800
 ```
 
 
@@ -30,14 +44,13 @@ echo $(seq 1 10) | xargs suca factorial
     -h, --help, --h  Show this message and exit.
 
     Commands:
-    sc                            Group for scientific calculations (click...
-    si                            Click gropup for simple calculations.
-    test-bash-completion-command  Test command for bash completion.
+    bashcomp  Test command for bash completion.
+    calc (c)  Click gropup for simple calculations.
+    dh        Dump the help to ../docs/dump_help.md.
 
 
-
-## Simple (si)
-    Usage: suca si [OPTIONS] COMMAND [ARGS]...
+## calc (c) group
+    Usage: suca calc [OPTIONS] COMMAND [ARGS]...
 
     Click gropup for simple calculations.
 
@@ -45,47 +58,11 @@ echo $(seq 1 10) | xargs suca factorial
     --help  Show this message and exit.
 
     Commands:
-    float (fl)  subcommand - Float operations
-    fr (fr)     subcommand - fractions
-    int (i)     subcommand - Integer operations
+    dh       Dump the help to ../docs/dump_help.md.
+    fr (fr)  subcommand - fractions
+    int (i)  subcommand - Integer operations
+    sci (s)  Group for scientific calculations (click help).
 
 
-### simple.fractions
-    Usage: suca si fr [OPTIONS] COMMAND [ARGS]...
-
-    subcommand - fractions
-
-    Options:
-    -h, --help  Show this message and exit.
-
-    Commands:
-    add  Add two fractions
-
-### simple.float
-
-    Usage: suca si float [OPTIONS] COMMAND [ARGS]...
-
-    subcommand - Float operations
-
-    Options:
-    -h, --help  Show this message and exit.
-
-    Commands:
-    add   Add two numbers
-    mult  Multiply numbers
-
-## scientific (sc)
-
-    Usage: suca sc [OPTIONS] COMMAND [ARGS]...
-
-    Group for scientific calculations (click help).
-
-    Options:
-    -h, --h, --help  Show this message and exit.
-
-    Commands:
-    cos   Calculate cosine of x
-    log   Calculate natural logarithm of x
-    sin   Calculate sine of a number.
-    sqrt  Calculate square root of x
-    tan   Calculate tangent of x
+For a more detailed help, use the `--help` option with the command
+or see the file [./doc/dump_help.md](./doc/dump_help.md)
