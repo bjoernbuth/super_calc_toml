@@ -84,6 +84,7 @@ def _fr():
 @_fr.command(name="add")
 @click.argument("x", type=str)
 @click.argument("y", type=str)
+@click.pass_context
 def fr_add(x, y):
     """Add two fractions"""
 

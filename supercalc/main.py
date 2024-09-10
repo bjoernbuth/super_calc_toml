@@ -7,10 +7,19 @@ from clickhelper.dumphelp_to_file import add_dump_help_to_file_command
 from supercalc.calc.calc import calc
 
 
-@click.group(cls=ClickAliasedGroup)
+@click.group(cls=ClickAliasedGroup, invoke_without_command=True)
 @click.help_option("-h", "--help", "--h")
-def suca():
-    pass
+@click.pass_context
+def suca(ctx: click.Context = None):
+    if ctx.invoked_subcommand is None:
+        click.echo("I am SuperCalc and was invoked without a subcommand!")
+        ctx.forward(calc)
+    else:
+        # print(3)
+        click.echo(f"Invoked command: {ctx.invoked_subcommand}")
+        # invoke the subcommand
+        # ctx.forward(ctx.invoked_subcommand)
+    # pass
 
 
 def read_number_from_file(filepath):
